@@ -2,91 +2,111 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Аварийный комиссар Воронеж</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #ececec);
+      color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #d32f2f;
+      background-color: #c62828;
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
     header h1 {
-      margin: 0;
-      font-size: 24px;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
     header p {
-      margin: 5px 0;
-      font-size: 16px;
+      font-size: 18px;
+      opacity: 0.9;
     }
     .hero {
-      background-color: #fff;
-      padding: 30px 20px;
       text-align: center;
+      padding: 50px 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .hero h2 {
-      font-size: 28px;
       color: #d32f2f;
+      font-size: 36px;
       margin-bottom: 10px;
     }
     .hero p {
       font-size: 20px;
       margin-bottom: 20px;
     }
+    .hero strong {
+      font-size: 22px;
+      color: #333;
+    }
+    .buttons {
+      margin-top: 25px;
+    }
     .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      font-size: 16px;
-      color: white;
-      background-color: #d32f2f;
       text-decoration: none;
-      border-radius: 5px;
+      margin: 10px;
+      padding: 14px 28px;
+      background-color: #c62828;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+    .buttons a:hover {
+      background-color: #a01818;
     }
     .features {
-      background-color: #f1f1f1;
-      padding: 20px;
+      padding: 40px 20px;
+      background-color: #fafafa;
+      text-align: center;
     }
     .features h3 {
-      text-align: center;
-      font-size: 22px;
-      margin-bottom: 20px;
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #d32f2f;
     }
     .features ul {
       list-style: none;
-      padding: 0;
       max-width: 600px;
       margin: 0 auto;
+      text-align: left;
     }
     .features li {
-      margin-bottom: 10px;
-      padding-left: 20px;
+      margin-bottom: 15px;
+      padding-left: 25px;
       position: relative;
     }
     .features li::before {
-      content: "—";
+      content: '✓';
       position: absolute;
       left: 0;
-    }
-    .slogan {
-      background-color: #d32f2f;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 20px;
+      color: #d32f2f;
       font-weight: bold;
     }
-    footer {
-      background-color: #222;
-      color: white;
+    .slogan {
       text-align: center;
+      font-size: 22px;
+      background-color: #d32f2f;
+      color: white;
+      padding: 25px 20px;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #ccc;
       padding: 20px;
       font-size: 14px;
     }
@@ -96,8 +116,7 @@
 
   <header>
     <h1>Аварийный комиссар — ВОРОНЕЖ</h1>
-    <p>+7 (910) 040-11-16</p>
-    <p>(звонок / WhatsApp — 24/7)</p>
+    
   </header>
 
   <section class="hero">
@@ -111,7 +130,7 @@
   </section>
 
   <section class="features">
-    <h3>Почему именно я?</h3>
+    <h3>Почему стоит выбрать меня?</h3>
     <ul>
       <li>Оформление ДТП строго по закону</li>
       <li>Профессиональная фотофиксация</li>
@@ -126,9 +145,8 @@
   </div>
 
   <footer>
-    Аварийный комиссар — Воронеж<br>
-    +7 (910) 040-11-16<br>
-    Круглосуточно. Без выходных.
+    © 2025 Аварийный комиссар — Воронеж<br>
+    Все права защищены
   </footer>
 
 </body>
