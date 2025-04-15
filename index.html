@@ -2,198 +2,103 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Аварийный Комиссар — Будущее Уже Здесь</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аварийный Комиссар</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
       color: #fff;
+      line-height: 1.6;
     }
     header {
-      padding: 100px 20px;
+      background: linear-gradient(135deg, #d32f2f, #b71c1c);
+      padding: 60px 20px;
       text-align: center;
-      background: url('https://images.unsplash.com/photo-1549921296-3a6b0c27b1d2?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 0;
-    }
-    header .inner {
-      position: relative;
-      z-index: 1;
     }
     header h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
     header p {
-      font-size: 20px;
-      color: #ccc;
+      font-size: 1.2em;
+      color: #ffeaea;
     }
-    .features {
-      padding: 80px 20px;
+    .btn {
+      margin-top: 20px;
+      background: #fff;
+      color: #d32f2f;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn:hover {
+      background: #d32f2f;
+      color: #fff;
+    }
+    .container {
       max-width: 1200px;
       margin: auto;
-      text-align: center;
+      padding: 40px 20px;
     }
-    .features h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      color: #00e5ff;
+    h2 {
+      color: #f44336;
+      margin-bottom: 20px;
+      text-align: center;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
     .card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 30px;
-      border: 1px solid #00e5ff;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      background: rgba(0, 229, 255, 0.1);
-    }
-    .card img {
-      width: 64px;
-      margin-bottom: 20px;
-      filter: brightness(0) invert(1);
-    }
-    .card p {
-      font-size: 16px;
-    }
-    .slogan {
-      text-align: center;
-      font-size: 28px;
-      color: #00e5ff;
-      margin: 60px 0;
-    }
-    footer {
-      background: #000;
-      color: #999;
-      text-align: center;
+      background: #1e1e1e;
       padding: 20px;
-      font-size: 14px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      text-align: center;
     }
-    @media (max-width: 768px) {
-      header h1 { font-size: 32px; }
-      .features h2 { font-size: 28px; }
-      .slogan { font-size: 20px; }
-    }
-  
-@keyframes neonPulse {
-  0%, 100% {
-    text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff;
-  }
-  50% {
-    text-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff, 0 0 40px #00e5ff;
-  }
-}
-header h1 {
-  animation: neonPulse 2s infinite;
-}
-.card {
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease, background 0.3s ease;
-}
-.card:hover {
-  transform: rotateY(5deg) rotateX(5deg);
-}
-.map {
-  margin: 60px auto;
-  max-width: 900px;
-  padding: 0 20px;
-}
-.map iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: 12px;
-}
-.call-button {
-  display: block;
-  margin: 40px auto;
-  text-align: center;
-}
-.call-button a {
-  background: #00e5ff;
-  color: #000;
-  padding: 16px 36px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 20px;
-  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff;
-  transition: background 0.3s ease;
-}
-.call-button a:hover {
-  background: #00bcd4;
-}
-</style>
+  </style>
 </head>
 <body>
 
 <header>
-  <div class="inner">
-    <h1>Аварийный Комиссар — Воронеж</h1>
-    <p>ПОПАЛ В ДТП? Не паникуй — звони профессионалу! ПРИЕЗЖАЮ ЗА 15 МИНУТ!</p>
-  </div>
+  <h1>Аварийный Комиссар 24/7</h1>
+  <p>Быстрая помощь при ДТП — в любое время, в любом месте.</p>
+  <a href="tel:+79100401116" class="btn">Вызвать комиссара</a>
 </header>
 
-<section class="features">
-  <h2>Преимущества работы со мной</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/law.png" alt="Законно">
-      <p>Оформление ДТП строго по закону</p>
+<div class="container">
+  <section>
+    <h2>Наши услуги</h2>
+    <div class="grid">
+      <div class="card">Оформление ДТП на месте</div>
+      <div class="card">Юридическая помощь</div>
+      <div class="card">Взаимодействие со страховой</div>
+      <div class="card">Фото- и видеофиксация</div>
     </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/camera.png" alt="Фотофиксация">
-      <p>Профессиональная фотофиксация</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/car-insurance.png" alt="ОСАГО">
-      <p>Помощь с ОСАГО и КАСКО</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/faq.png" alt="Консультация">
-      <p>Бесплатная консультация</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/clock.png" alt="24/7">
-      <p>Работаю круглосуточно, без выходных</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-<div class="slogan">Будущее страховых ситуаций уже сегодня</div>
-
-<div class="call-button">
-  <a href="tel:+79100401116">Вызвать специалиста: +7 (910) 040-11-16</a>
+  <section style="margin-top: 60px;">
+    <h2>Почему выбирают нас</h2>
+    <div class="grid">
+      <div class="card">Круглосуточная работа</div>
+      <div class="card">10+ лет опыта</div>
+      <div class="card">Прибытие до 15 минут</div>
+      <div class="card">Профессионализм и конфиденциальность</div>
+    </div>
+  </section>
 </div>
-
-<div class="map">
-  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3942b30e5e5c71c6b5c7907d6b1ad77c3345be1c5d8ec2a3682be349be6dc828&amp;source=constructor" allowfullscreen></iframe>
-</div>
-
-
-<footer>
-  © 2025 Аварийный комиссар — Воронеж. Быстро. Законно. Надёжно.
-</footer>
 
 </body>
 </html>
